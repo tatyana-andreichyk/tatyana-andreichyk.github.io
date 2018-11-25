@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube client</title>
+    <link href="css/normalize.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="libs/fontawesome-free-5.0.9/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/script.js" defer></script>
+  </head>
+    
+  <body>
+  
+    <div class="wrapper">  
+      <input type="text" id="search-input" placeholder="Search..." />      
+      <section class="search-items-container"></section>    
+      <div class="radio-buttons-container"></div>
+    </div>
+      
+    <template id="searchItemTemplate">  
+      <article class="item">
+        <a href="" class="item-title"></a>
+        <div class="item-thumbnail-container">
+          <img class="item-thumbnail" src="" alt="title image"/>
+        </div>
+        <div class="item-info">
+          <ul class="item-icons">
+            <li><i class="fas fa-male"></i></li>
+            <li><i class="fas fa-calendar-alt"></i></li>
+            <li><i class="fas fa-eye"></i></li>
+          </ul>         
+          <ul class="item-data">
+            <li class="item-author"></li>
+            <li class="item-publication-date"></li>
+            <li class="item-view-rate"></li>
+          </ul>
+        </div>
+        <p class="item-description"></p>
+      </article>    
+    </template>  
+    
+  </body>
+</html>
