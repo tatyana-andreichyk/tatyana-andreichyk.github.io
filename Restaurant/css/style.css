@@ -1,0 +1,620 @@
+body, html {
+    width: 1600px;
+    margin: 0 auto;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;  
+}
+
+
+.wrapper {
+    width: 1600px;
+    height: 100%;
+    position: relative;
+    background: url("../img/pattern.png") repeat center center;
+}
+
+
+/* Header */
+.header {
+    width: 1600px;
+    height: 110px;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);    
+}
+
+.header .logo {
+    display: inline-block;
+    position: absolute;
+    top: 47px;
+    left: 179px;
+}
+
+.header > h1 {
+    visibility: hidden;
+}
+
+
+
+/* Navigation menu */
+.navigation-menu {
+    margin: 0;
+    font-weight: 600;
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    left: 500px;
+}
+
+.navigation-menu ul {
+    list-style: none;
+    padding-left: 60px;
+}
+
+.navigation-menu ul > li {
+    display: inline-block;
+    padding-right: 23px;
+}
+
+.navigation-menu ul > li > a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 46px 14px 0 14px;
+    border-top: 3px solid transparent;
+    font-family: "Gentium Book Basic", "Times New Roman", serif;
+    font-size: 2.1rem;
+    color: #fff;
+}
+
+.navigation-menu a:hover, .navigation-menu a:active {
+    border-top: 3px solid #fff;
+}
+
+
+
+/* Social icons after Navigation menu */
+.header-social-icons {
+    position: absolute;
+    top: 52px;
+    left: 1304px;
+}
+
+.header-social-icons .fab {
+    color: #dab33e;
+    font-size: 1.83rem;
+    margin-right: 14px;
+}
+
+.header-social-icons .fab:hover {
+    color: #fff;
+}
+
+
+
+/* Content*/
+.content {
+    width: 1600px;
+    height: 100%;
+    min-height: calc(100vh - 320px);
+}
+
+h1{
+    margin: 0;
+}
+
+h2 {
+    font-family: "Yeseva One", "Times New Roman", cursive;
+    font-size: 9rem;
+    font-weight: 400;
+    line-height: 11.84rem;
+    margin: 0;
+}
+
+h3 {
+    font-family: "Yeseva One", "Times New Roman", cursive;
+    font-size: 3.6rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+h4 {
+    font-family: "Yeseva One", "Times New Roman", cursive;
+    font-size: 2.1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+p {
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: #4c4c4c;
+    margin: 0;
+}
+
+
+
+/* Section Promo */
+.section_promo{
+    width: 100%;
+    height: 750px;
+    background: url("../img/img-sec-promo.jpg") no-repeat left top;
+}
+
+.section_promo h2 {
+    padding: 214px 0 24px 0;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(1,1,1,0.64);
+}
+
+.section_promo img {
+    display: block;
+    margin: 0 auto;  
+}
+
+.section_promo_buttons {
+    padding-left: 541px;
+    margin-top: 33px;
+}
+
+.section_promo_buttons > a {
+    width: 226px;
+    padding: 19px 0 18px 0;
+    margin: 0 15px 0 15px;
+    display: block;
+    float: left;
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.section_promo_buttons > a:hover {
+    background: rgba(0,0,0,0.7);
+    border: 1px solid #000;
+}
+
+
+
+/* Section About */
+.section_about {
+    width: 100%;
+    height: 710px;
+    font-size: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0) 0%,rgba(0,0,0,0.09) 100%);
+    box-shadow: inset 5px 0 100px -30px rgba(0,0,0,0.2), inset -5px 0 100px -30px rgba(0,0,0,0.1);
+}
+
+.section_about article {
+    width: 27%;
+    padding: 102px 0;
+    margin-left: 282px;
+    display: inline-block;
+    float: left;
+    text-align: center;
+}
+
+.section_about article > h3 {
+    color: #c90;
+}
+
+.section_about article > h3::after {
+    content: url("../img/divider-1.png");
+    margin: 6px auto 16px auto;
+    display: block;
+}
+
+.section_about article p {
+    max-height: 118px;
+    overflow: hidden;
+}
+
+.section_about_article_image {
+    margin: 50px 0 0 70px;
+}
+
+.section_about_image_right {
+    display: inline-block;
+    float: right;
+    padding: 55px 0;
+    margin-right: 240px;
+}
+
+
+/* Section Ingredients*/
+.section_ingredients {
+    width: 100%;
+    height: 758px;
+    background: url("../img/img-sec-ingredients.jpg") no-repeat left top;
+}
+
+.section_ingredients article {
+    width: 570px;
+    height: 557px;
+    float: left;
+    box-sizing: border-box;
+    padding: 77px 70px 0 70px;
+    margin: 75px 0 0 815px;
+    background: url("../img/bg-article-sec-ingredients.png") no-repeat left top;
+    text-align: center;
+}
+
+.section_ingredients article > h3 {
+    color: #fff;
+}
+
+.section_ingredients article > h3::after {
+    content: url("../img/divider-2.png");
+    margin: 6px auto 16px auto;
+    display: block;
+}
+
+.section_ingredients article p {
+    color: #fff;
+    max-height: 116px;
+    overflow: hidden;
+}
+
+.ingredients_images_container {
+    margin-top: 71px;
+    font-size: 0;
+}
+
+.ingredients_images_container > div{
+    width: 100px;
+    height: 100px;
+    margin: 0 15px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.1);
+    overflow: hidden;
+}
+
+
+
+/* Section Menu */
+.section_menu {
+    width: 100%;
+    height: auto;
+    min-height: 994px;
+    box-sizing: border-box;
+    padding: 0 200px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(0,0,0,0.07) 0%, rgba(255,255,255,0) 100%), url("../img/pattern-sec-menu.png") repeat center center;
+    box-shadow: inset 5px 0 100px -30px rgba(0,0,0,0.2), inset -5px 0 100px -30px rgba(0,0,0,0.1);
+}
+
+.menu_column {
+    width: 570px;
+    height: 100%;
+    float: left;
+    margin: 50px 15px;
+}
+
+.menu_group {
+    box-sizing: border-box;
+    padding: 0 56px;
+    margin-top: 50px;
+}
+
+.menu_group h3 {
+    color: #c89f2d;
+    text-align: center;
+}
+
+.menu_group h3::after {
+    content: url("../img/divider-1.png");
+    margin: 6px auto 0 auto;
+    display: block;
+}
+
+.menu_group > div {
+    border: 1px solid transparent;
+    width: 430px;
+    padding: 7px 11px 8px 11px;
+    margin: 13px 0 14px 0;
+}
+
+div.featured_item {
+    position: relative;
+    border: 1px solid rgba(200,159,45,0.4);
+}
+
+div.featured_item::before {
+    content: "Special";
+    display: block;
+    width: 69px;
+    height: 22px;
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #f8fafa;
+    background: url("../img/bg_mark_featured_item.png") no-repeat left top;
+    position: absolute;
+    top: -22px;
+    left: 384px;
+    box-sizing: border-box;
+    padding-top: 3px;
+}
+
+.menu_group div h4 {
+    color: #c90;
+    position: relative;
+}
+
+.menu_group div h4::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin: 8px 0 9px 0;
+    background: rgba(200,159,45,0.4);
+}
+
+.dish_price {
+    position: absolute;
+    right: 0;
+}
+
+
+
+/* Section Reviews */
+.section_reviews {
+    width: 100%;
+    height: 758px;
+    background: url("../img/img-sec-reviews.jpg") no-repeat left top;
+    text-align: center;
+    font-size: 0;
+}
+
+.section_reviews:before {
+    content: "";
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.section_reviews article {
+    width: 770px;
+    height: 557px;
+    box-sizing: border-box;
+    padding-top: 77px;
+    background: rgba(0,0,0,0.8);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.section_reviews article > h3{
+    color: #fff;
+}
+
+.section_reviews article > h3::after {
+    content: url("../img/divider-2.png");
+    margin: 6px auto 10px auto;
+    display: block;
+}
+
+.section_reviews_quote_text {
+    position: relative;
+    margin: 0 70px;
+}
+
+.section_reviews_quote_text::before {
+    color: #fff;
+    content: url("../img/quote.png");
+    display: block;
+    position: absolute;
+    left: -40px;
+    top: -5px;
+}
+
+.section_reviews_quote_text p:first-child{
+    max-height: 215px;
+    overflow: hidden;
+    font-family: "Gentium Book Basic", "Times New Roman", serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 4.5rem;
+    word-spacing: 0.08rem;
+    color: #dde0df;
+}
+
+.section_reviews_quote_text p:last-child{
+    max-height: 50px;
+    overflow: hidden;
+    margin-top: 40px;
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+
+
+/* Section Reservations */
+.section_reservations {
+    width: 100%;
+    height: 710px;
+    background: linear-gradient(135deg, rgba(255,255,255,0) 0%,rgba(0,0,0,0.07) 100%);
+    box-shadow: inset 5px 0 100px -30px rgba(0,0,0,0.2), inset -5px 0 100px -30px rgba(0,0,0,0.1);
+    font-size: 0;
+}
+
+.section_reservations  figure {
+    width: 50%;
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    padding: 100px 0 0 200px;
+    margin: 0;
+}
+
+.section_reservations  figure > img {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.section_reservations  article{
+    width: 50%;
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    padding: 97px 290px 0 90px;
+    text-align: center;
+}
+
+.section_reservations  article > h3{
+    color: #cc9900;
+}
+
+.section_reservations article > h3::after {
+    content: url("../img/divider-1.png");
+    margin: 6px auto 16px auto;
+    display: block;
+}
+
+.section_reservations article p {
+    max-height: 70px;
+    overflow: hidden;
+}
+
+.section_reservations article p:last-of-type {
+    margin-top: 12px;
+}
+
+
+
+/* Form reservation */
+.form_reservation {
+    margin: 66px -22px 0 -22px;
+}
+
+
+.form_reservation input, .form_reservation select  {
+    width: 198px;
+    height: 35px;
+    margin: 0 16px 0 16px;
+    box-sizing: border-box;
+    padding-left: 13px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #7c7c7c;
+    background: rgba(255,255,255,0.4);
+    border: 1px solid #c8c6c6;
+}
+
+.form_reservation input:focus, .form_reservation select:focus {
+    outline: none;
+    border: 1px solid #c89f2d;
+}
+
+
+.form_reservation select {
+    width: 199px;
+    height: 37px;
+}
+
+.form_reservation label {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #c9a131;
+    position: absolute;
+    top: -23px;
+    left: 14px;
+}
+
+
+.row_form {
+    margin: 0 0 48px 0;
+}
+
+.cell-form {
+    display: inline-block;
+    position: relative;
+}
+
+.button-reservation {
+    width: 200px;
+    height: 36px;
+    margin-top: -15px;
+    color: #fff;
+    background: #c89f2d;
+    border: 0px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.6rem;
+}
+
+.error_msg{
+    display: inline-block;
+    font-size: 14px;
+    color: red;
+    margin-left: 10px;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    height: 320px;
+    background: #191919;
+    box-sizing: border-box;
+    padding: 0 200px;
+    overflow: hidden;
+}
+
+.footer-column {
+    width: 370px;
+    height: 100%;
+    float: left;  
+    margin: 0 15px;
+    text-align: center;
+}
+
+.footer-column > h4 {
+    color: #fff;
+    margin-top: 57px;
+}
+
+.footer-column  > h4::after {
+    content: url("../img/divider-3.png");
+    margin: 16px auto 12px auto;
+    display: block;
+}
+
+.footer-column p {
+    color: #fff;
+    letter-spacing: 0.05rem;
+}
+
+.footer-column span {
+    font-weight: 800;
+}
+
+.footer-payments .fab {
+    color: #fff;
+    font-size: 1.75rem;
+    margin: 50px 5px 0 5px;
+}
+
+.footer-social-icons .fab {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 52px 5px 0 5px;
+}
