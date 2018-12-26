@@ -1,0 +1,36 @@
+section.slide h1{
+  font-size: 5vw;
+  color: #159cfe;
+}
+
+section.slide h2{
+  font-size: 3.2vw;
+}
+
+section.slide p {
+  font-size: 2vw;
+}
+
+section.slide span {
+  color: #ff5555;
+}
+
+section.slide ul li {
+  font-size: 2vw;
+  line-height: 3vw;
+}
+
+section.slide a{
+  text-decoration: underline;
+}
+
+section.slide img {
+ border: none;
+}
+
+section.slide.links ul li{
+  font-size: 1.6vw;
+  line-height: 2vw;
+}
+
+

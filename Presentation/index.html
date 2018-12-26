@@ -1,0 +1,348 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+    
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+    
+		<!-- Printing and PDF exports -->       
+    <link rel="stylesheet" href="css/style.css">
+    
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+      
+				<section class="slide">
+          <h1>Responsive Web Design</br>
+            Flexbox</br>
+            CSS Grid Layout
+          </h1>
+        </section>
+        
+        
+        <section>
+          <section class="slide">
+            <h2>What is Responsive Web design?</h2>
+            <p>Responsive Web Design is about using HTML and CSS to automatically resize a website to make it look good on all devices (desktops, tablets and phones).</p>
+            <img src="img/RWD.png" width="800"/>
+          </section>
+          
+          <section class="slide">
+            <h2>Follow the “mobile first” philosophy</h2>
+            <p>The “mobile first” approach tells us that the first step is designing the optimal view for mobile devices.
+            </p>
+          </section>
+          
+          <section class="slide">
+            <h2>The main ingredients of Responsive Web design:</h2>
+            <ul>
+              <li>Viewport</li>
+              <li>Grid-View</li>
+              <li>Flexible images</li>
+              <li>Media queries</li>
+            </ul>
+          </section>
+          
+          <section class="slide">
+            <h2>Viewport</h2> 
+            <p>HTML5 introduced a method to let web designers take control over the viewport, through the <meta> tag.</p>
+            <img src="img/viewport-example.png"/>  
+            <p>A <span>meta</span> viewport element gives the browser instructions on how to control the page's dimensions and scaling.</p>
+            <p>The <span>width=device-width</span> part sets the width of the page to follow the screen-width of the device.</p>
+            <p>The <span>initial-scale=1.0</span> part sets the initial zoom level when the page is first loaded by the browser.</p>
+          </section>
+          
+          <section class="slide">
+            <h2>Grid-View</h2>
+            <p>It means that the page is divided into columns.</p>
+            <p>A responsive grid-view often has 12 columns, and has a total width of 100%, and will shrink and expand as you resize the browser window.</p>
+            <img src="img/grid-view.png" width="800"/>
+          </section>
+          
+          <section class="slide">
+            <h2>Flexible images</h2>
+            <p>Responsive images are images that scale nicely to fit any browser size.</p>
+            <p>If the <span>width</span> property is set to a percentage and the height is set to "auto", the image will be responsive and scale up and down.</p>
+            <p>If the <span>max-width</span> property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size.</p>
+            <p>Example:</p>
+            <img src="img/flexible-images-example.png"/>
+          </section>
+           
+          <section class="slide">
+            <h2>Media queries</h2>         
+            <p>The third ingredient of RWD is media queries. With media queries you can define completely different styles for different browser sizes.</p>
+            <p>Media query is a CSS technique introduced in CSS3.</p>
+            <p>It uses the <span>@media</span> rule to include a block of CSS properties only if a certain condition is true.</p>
+            <p>Example:</p>
+            <img src="img/media-query-example.png"/> 
+          </section>
+        </section>
+               
+        
+        
+        <section>
+          <section class="slide">
+            <h2>Grid and Flexbox</h2>
+            <p>Flexbox layout is most appropriate to the components of an application, and small-scale layouts, while the Grid layout is intended for 
+              larger scale layouts.
+            </p>
+          </section>
+        
+          <section class="slide">
+            <p>The following tables provided by <a href="https://caniuse.com/">caniuse.com</a> show the level of browser support for this features.</p>
+            <img src="img/flexbox_usage.png"/>
+            <img src="img/grid_usage.png"/>
+          </section>
+          
+          <section class="slide">
+            <h2>Flex and grid — what's the difference?</h2>
+            <p><span>Flexbox</span> was designed for layout in <span>one dimension</span>: either a row or a column.</p>
+            <p><span>Grid</span> was designed for <span>two-dimensional</span> layout: rows and columns at the same time.</p>
+            <img src="img/flexbox_vs_grid.png" width="600"/>
+          </section>
+        </section>
+        
+        
+        
+        <section>
+          <section class="slide">
+            <h2>What is a Flexbox Layout?</h2>
+            <p>The Flexible Box Layout Module makes easier to design flexible responsive layout structure without using float or positioning.</p>
+          </section>
+          
+          <section class="slide">
+            <h2>Main terms for Flexbox Layout</h2>
+            <img src="img/main-flex-terms.png" width="800"/>
+          </section>
+          
+          <section class="slide">
+            <h2>Flexbox Definition</h2>
+            <p>To start using the Flexbox model, you need to first define a flex container.</p>
+            <p>To create the flexbox container you just need to use:</p>
+            <ul>
+              <li>display: flex;</li>
+              <li>display: inline-flex;</li>
+            </ul>
+          </section>
+          
+          <section class="slide">
+            <h2>The flex container properties are:</h2>
+            <ul>
+              <li>flex-direction</li>
+              <li>flex-wrap</li>
+              <li>flex-flow</li>
+              <li>justify-content</li>
+              <li>align-items</li>
+              <li>align-content</li>
+            </ul>
+          </section>
+          
+          <section class="slide">
+            <ul>
+              <li>The <span>flex-direction</span> property defines in which direction the container wants to stack the flex items (column, column-reverse, row, row-reverse).</li>
+              <li>The <span>flex-wrap</span> property specifies whether the flex items should wrap or not (wrap, nowrap, wrap-reverse).</li>
+              <li>The <span>flex-flow</span> property is a shorthand property for setting both the flex-direction and flex-wrap properties.</li>
+              <li>The <span>justify-content</span> property is used to align the flex items (center, flex-start, flex-end, space-around, space-between).</li>
+              <li>The <span>align-items</span> property is used to align the flex items vertically (center, flex-start, flex-end, stretch, baseline).</li>
+              <li>The <span>align-content</span> property is used to align the flex lines (center, space-around, space-between, stretch, flex-start, flex-end).</li>
+            </ul>
+          </section>
+          
+          <section class="slide">
+            <h2>The flex item properties are:</h2>
+            <ul>
+              <li>order</li>
+              <li>flex-grow</li>
+              <li>flex-shrink</li>
+              <li>flex-basis</li>
+              <li>flex</li>
+              <li>align-self</li>
+            </ul>
+          </section>
+        
+          <section class="slide">
+            <ul>
+              <li>The <span>order</span> property specifies the order of the flex items.The order value must be a number, default value is 0.</li>
+              <li>The <span>flex-grow</span> property specifies how much a flex item will grow relative to the rest of the flex items. The value must be a number, default value is 0.</li>
+              <li>The <span>flex-shrink</span> property specifies how much a flex item will shrink relative to the rest of the flex items. The value must be a number, default value is 1.</li>
+              <li>The <span>flex-basis</span> property specifies the initial length of a flex item.</li>
+              <li>The <span>flex</span> property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties.</li>
+              <li>The <span>align-self</span> property specifies the alignment for the selected item inside the flexible container (center, flex-start, flex-end, stretch, baseline).</li>
+            </ul>
+          </section>
+          
+          <section class="slide">
+            <h2>Example</h2>
+            <img src="img/flex-example.png"/>
+          </section>
+        </section>
+
+        <section>
+          <section class="slide">
+            <h2>What is a Grid Layout?</h2>
+            <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages 
+              without having to use floats and positioning.
+            </p>
+            <p>A Grid Layout consists of a parent element, with one or more child elements.</p>
+
+          </section>
+          
+          <section class="slide">
+            <h2>Main terms for Grid Layout</h2>
+            <img src="img/main-grid-terms.png" width="600"/>
+          </section>
+                    
+          <section class="slide">
+            <h2>Grid Definition</h2>
+            <p>To create a grid you just need to use:</p>
+            <ul>
+              <li>display: grid;</li>
+              <li>display: inline-grid;</li>
+            </ul>
+          </section>
+          
+          <section class="slide">
+            <h2>Properties for the Grid Container:</h2>
+            <ul>
+              <li>display</li>
+              <li>grid-template-columns</li>
+              <li>grid-template-rows</li>
+              <li>grid-template-areas</li>
+              <li>grid-template</li>
+              <li>grid-column-gap</li>
+              <li>grid-gap</li>
+              <li>justify-items</li>
+              <li>align-items</li>
+              <li>justify-content</li>
+              <li>align-content</li>
+              <li>grid-auto-columns</li>
+              <li>grid-auto-rows</li>
+              <li>grid-auto-flow</li>
+              <li>grid</li>
+            </ul>
+          </section>
+          
+          <section class="slide">
+            <ul>
+              <li>The <span>grid-template-columns</span> property defines the number of columns in your grid layout, and it can define the width of each column.</li>
+              <li>The <span>grid-template-rows</span> property defines the height of each row.</li>
+              <li>The <span>grid-gap</span> property is a shorthand property for the <span>grid-column-gap</span> and the <span>grid-row-gap</span> properties. You can adjust the gap size by using this properties.</li>
+              <li>The <span>justify-content</span> property is used to align the whole grid inside the container (start, center, end, space-between, space-around, space-evenly).</li>
+              <li>The <span>align-content</span> property is used to vertically align the whole grid inside the container (start, center, end, space-between, space-around, space-evenly).</li>
+            </ul>
+          </section>
+          
+          <section class="slide">
+            <h2>Properties for the Grid Items:</h2>
+            <ul>
+              <li>grid-column-start</li>
+              <li>grid-column-end</li>
+              <li>grid-row-start</li>
+              <li>grid-row-end</li>
+              <li>grid-column</li>
+              <li>grid-row</li>
+              <li>grid-area</li>
+              <li>justify-self</li>
+              <li>align-self</li>
+            </ul>
+          </section>
+          
+          <section class="slide">
+            <ul>
+              <li>The <span>grid-column</span> property defines on which column(s) to place an item. You define where the item will start, and where the item will end.</li>
+              <li>The <span>grid-row</span> property defines on which row to place an item. You define where the item will start, and where the item will end.</li>
+              <li>The <span>grid-area</span> property can be used as a shorthand property for the <span>grid-row-start</span>, <span>grid-column-start</span>, <span>grid-row-end</span> and <span>grid-column-end</span> properties.</li>
+              <li>The <span>grid-area</span> property can also be used to assign names to grid items.</li>
+              <p>Named grid items can be referred to by the grid-template-areas property of the grid container. Each row is defined by apostrophes (' '). The columns in each row is defined inside the apostrophes, separated by a space.</p>
+            </ul>
+          </section>
+ 
+          <section class="slide">
+            <h2>Fr (fraction)</h2>
+            <p><span>fr</span> (which stands for <span>fraction</span>) is a new value created for CSS grid.</p>
+            <p>grid-container: 1fr;</p>
+            <p>means, that one fraction of the available space will be used.</p>
+          </section>
+                  
+          <section class="slide">
+            <h2>Example</h2>
+            <img src="img/grid-example.png"/>
+          </section>        
+        </section>
+
+        
+      
+        <section class="slide">
+          <h2>Does CSS Grid Replace Flexbox?</h2>
+          <p>No.</p>
+          <p>They can work together: a grid item can be a flexbox container. A flex item can be a grid container.</p>
+          <p>But here's some things Grid is specifically better at than Flexbox:</p>
+          <ul>
+            <li>Making whole page layouts. It's better for that even just considering layout performance reasons.</li>
+            <li>Making literal grids. Like X columns with Y gap between them. Grid-gap is wonderful, as gutters are the main pain point of grid systems.</li>
+            <li>Requiring less media query intervention with really powerful functionality like: minmax(), repeat(), auto-fit and auto-fill.</li>
+          </ul>
+        </section>
+        
+        
+        
+        <section class="slide links">
+          <h2>You can learn more:</h2>
+          <p>Responsive Web design:</p>
+            <ul>
+              <li><a href="https://www.w3schools.com/html/html_responsive.asp">https://www.w3schools.com/html/html_responsive.asp</a></li>
+              <li><a href="https://www.w3schools.com/css/css_rwd_intro.asp">https://www.w3schools.com/css/css_rwd_intro.asp</a></li>
+              <li><a href="https://en.wikipedia.org/wiki/Responsive_web_design">https://en.wikipedia.org/wiki/Responsive_web_design</a></li>
+            </ul>
+          <p>Flexbox:</p>
+          <ul>
+            <li><a href="https://www.w3schools.com/css/css3_flexbox.asp">https://www.w3schools.com/css/css3_flexbox.asp</a></li>
+            <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout</a></li>
+            <li><a href="https://www.w3.org/TR/css-flexbox-1/">https://www.w3.org/TR/css-flexbox-1/</a></li>
+          </ul>   
+          <p>Grid Layout:</p>
+            <ul>
+              <li><a href="https://www.w3schools.com/css/css_grid.asp">https://www.w3schools.com/css/css_grid.asp</a></li>
+              <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">https://css-tricks.com/snippets/css/complete-guide-grid/</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout</a></li>
+              <li><a href="https://www.w3.org/TR/css-grid-1/">https://www.w3.org/TR/css-grid-1/</a></li>
+            </ul> 
+          <p>and the other sources</p>
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
